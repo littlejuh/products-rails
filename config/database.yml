@@ -33,12 +33,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
+  url: postgres://<%= ENV['DATABASE_NAME'] %>:<%= ENV['DATABASE_PASSWORD'] %><%= ENV['DATABASE_URL'] %>:<%= ENV['DATABASE_PORT'] %>/<%= ENV['DATABASE_DATABASE'] %>
   pool: 5
-  url: <%= ENV['DATABASE_URL'] %>
-  name: <%= ENV['DATABASE_NAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  port: <%= ENV['DATABASE_PORT'] %>
-  database: <%= ENV['DATABASE_DATABASE'] %>
 
 
 
