@@ -1,0 +1,26 @@
+<%= turbo_stream.replace "modal" do %>
+  <turbo-frame id="modal">
+    <div class="modal">
+      <div class="modal-content">
+        <h3>Edit Note</h3>
+
+        <%= form_with(model: @note, data: { turbo_frame: "modal" }) do |form| %>
+          <div class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title, class: "input" %>
+          </div>
+
+          <div class="field">
+            <%= form.label :description %>
+            <%= form.text_area :description, class: "input" %>
+          </div>
+
+          <div class="actions mt-md">
+            <%= form.submit "Save", class: "btn btn-primary" %>
+            <%= link_to "Cancel", "#", data: { action: "click->modal#close" }, class: "btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </turbo-frame>
+<% end %>

@@ -1,0 +1,12 @@
+<turbo-frame id="note_<%= note.id %>">
+  <div class="card mt-sm">
+    <h3><%= note.title %></h3>
+    <p><%= note.description %></p>
+    <small class="text-muted"><%= note.created_at.strftime("%b %d, %Y %H:%M") %></small>
+
+    <div class="flex gap-sm">
+      <%= link_to "Edit", edit_note_path(note), data: { turbo_frame: "modal" }, class: "btn" %>
+      <%= link_to "Delete", note_path(note), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+    </div>
+  </div>
+</turbo-frame>

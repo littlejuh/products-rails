@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProdutosApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between">
+        <%= link_to "ProdutosApp", root_path, class: "font-bold text-lg" %>
+        <%= link_to "Novo Produto", new_product_path, class: "bg-white text-blue-600 px-3 py-1 rounded hover:bg-gray-100" %>
+      </div>
+    </nav>
+
+    <main class="container mx-auto mt-8 flex-grow px-4">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 text-center mt-8">
+      Feito com 💎 Ruby on Rails + Hotwire
+    </footer>
+  </body>
+</html>

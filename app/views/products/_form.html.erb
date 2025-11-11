@@ -1,0 +1,23 @@
+<%= form_with(model: @product, class: "space-y-4") do |form| %>
+  <div>
+    <%= form.label :name, class: "block font-semibold mb-1" %>
+    <%= form.text_field :name, class: "w-full border rounded p-2" %>
+  </div>
+
+  <div>
+    <%= form.label :price, "Preço", class: "block font-semibold mb-1" %>
+    <%= form.number_field :price, step: 0.01, class: "w-full border rounded p-2" %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, "Quantidade", class: "block font-semibold mb-1" %>
+    <%= form.number_field :quantity, class: "w-full border rounded p-2" %>
+  </div>
+
+  <div>
+    <%= form.label :image_url, "URL da Imagem", class: "block font-semibold mb-1" %>
+    <%= form.text_field :image_url, class: "w-full border rounded p-2" %>
+  </div>
+
+  <%= form.submit class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" %>
+<% end %>
