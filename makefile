@@ -1,6 +1,2 @@
-build:
-	docker build . -t notes:latest	
-run:
-	docker run -e RAILS_ENV=development notes:latest
-migrate:
-	docker run -it notes:latest bundle db:migrate
+KEY: SECRET_KEY_BASE
+VALUE: 3db67d0c99c9598df16ac22feb49c84480436f6a9a7297105f4725808862ca46296b428d14673eea724364e86d308d3df877015d569ae88f28e40e859e66a9cd
