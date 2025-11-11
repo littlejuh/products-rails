@@ -35,4 +35,10 @@ production:
   encoding: unicode
   pool: 5
   url: <%= ENV['DATABASE_URL'] %>
+  name: <%= ENV['DATABASE_NAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+  database: <%= ENV['DATABASE_DATABASE'] %>
+
+
 
